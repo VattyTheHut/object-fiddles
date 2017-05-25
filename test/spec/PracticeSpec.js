@@ -182,13 +182,13 @@ describe('practice.js', function () {
 			expect(makePerson).toBeDefined();
 		})
 		it('should return an object', function () {
-			expect(makePerson()).toEqual(jasmine.any(Object));
+			expect(new makePerson()).toEqual(jasmine.any(Object));
 		})
 
 		describe('return object', function () {
 			var returnObject = {};
 			beforeEach(function () {
-				returnObject = makePerson('Tester', 'Nov 1', '123456789');
+				returnObject = new makePerson('Tester', 'Nov 1', '123456789');
 			})
 			it('should have 3 keys named "name", "birthday" and "ssn"', function () {
 				var numberOfKeys = Object.keys(returnObject).length;
@@ -212,12 +212,12 @@ describe('practice.js', function () {
 			expect(makeCard).toBeDefined();
 		})
 		it('should return an object', function () {
-			expect(makeCard()).toEqual(jasmine.any(Object));
+			expect(new makeCard()).toEqual(jasmine.any(Object));
 		})
 	})
 
 	describe('bindCard', function () {
-		var person = makePerson('Tester', 'Nov 1', '123456789');
+		var person = new makePerson('Tester', 'Nov 1', '123456789');
 		var makeCard = jasmine.createSpy('makeCard').and.returnValue({
 			expirationDate: 'Dec2016',
 			cardNumber: '1234123412341234',

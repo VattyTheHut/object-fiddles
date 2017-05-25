@@ -8,7 +8,6 @@
     age: '19'
   }
 
-
   alert(me.name);
 
 
@@ -26,7 +25,7 @@
     person: "You ;)", 
     book: ["siddhartha", "free will"], 
     movie: "the girl that lept though time", 
-    holiday: NaN
+    holiday: "none"
 
   }
 
@@ -35,7 +34,7 @@
 
   
   favoriteThings.car = "somethin selfdrivin booooy!";
-  favoriteThings["band"] = "Death Grips";
+  favoriteThings["brand"] = "Death Grips";
 
 
 //Now change the value of the food key in your favoriteThings object to be 'Chicken Nuggets' and change the value of the book key in your favoriteThings object to be 'Harry Potter'.
@@ -140,7 +139,10 @@ var album = {
     delaware: 1,
     newYork: 200,
     texas: 500,
-    newMexico: 10000000
+    newMexico: 10000000,
+    cali: 2323
+
+
 
   }
 
@@ -176,9 +178,9 @@ that each value is truthy. If it's not truthy, remove it from the object. */
 
   for(var prof in user1){
 
-    if(user[prof]){
+    if(!user1[prof]){
 
-        delete user[prof];
+        delete user1[prof];
 
     }
 
@@ -189,8 +191,7 @@ that each value is truthy. If it's not truthy, remove it from the object. */
 
   user1.name = "vatekeh";
   user1.username = "theamazing9yearold";
-  user1.age = 9;
-  user1.birthday = "2008";
+  user1.pwHash = "2008";
 
   
 
@@ -215,7 +216,7 @@ var user2 = {
 // name -> 'Tyler S. McGinnis', email -> 'tyler.mcginnis@devmounta.in'. Make that change.
 
   user2.name = 'Tyler S. McGinnis';
-  user.email = 'tyler.mcginnis@devmounta.in';
+  user2.email = 'tyler.mcginnis@devmounta.in';
 
 //Now call the sayEmail method that's on the user object which will alert the users email
 
@@ -259,7 +260,7 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   function makePerson(name, birthday, ssn){
       this.name = name;
-      this.name = birthday;
+      this.birthday = birthday;
       this.ssn = ssn;
   }
 
